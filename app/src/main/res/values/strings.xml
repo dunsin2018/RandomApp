@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RandomApp</string>
+    <string name="km_mi"><![CDATA[Km -> mi]]></string>
 </resources>

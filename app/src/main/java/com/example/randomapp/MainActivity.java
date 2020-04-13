@@ -1,5 +1,6 @@
 package com.example.randomapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button addBtn,minusBtn,multiplyBtn,divideBtn,powerBtn,clearBtn,equalToBtn;
+    Button addBtn,minusBtn,multiplyBtn,divideBtn,powerBtn,clearBtn,equalToBtn, KmToMiBtn;
     EditText  secondNumEditText;
     Float num1,num2;
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
          powerBtn = findViewById(R.id.powerBtn);
          clearBtn = findViewById(R.id.clearBtn);
          equalToBtn = findViewById(R.id.equalToBtn);
+         KmToMiBtn = findViewById(R.id.KmToMiBtn);
 
 
         secondNumEditText = findViewById(R.id.secondNumEditText);
@@ -139,6 +141,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // Activity switch button with listener
+
+        KmToMiBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openConverter();
+
+            }
+        });
+    }
+
+    public void openConverter(){
+
+        Intent intentOne = new Intent(MainActivity.this, KilometerToMileActivity.class);
+        startActivity(intentOne);
     }
 }
 
