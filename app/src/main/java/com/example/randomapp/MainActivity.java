@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         // adding button listener
 
-        //addition button
+        //add button
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
