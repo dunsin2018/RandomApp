@@ -20,6 +20,7 @@ public class recycleadapter extends RecyclerView.Adapter<recycleadapter.ViewHold
     private  Context mContext;
 
     // data is passed into the constructor
+    // CONNECT YOUR PHONE
     public recycleadapter(Context context, ArrayList<FireBaseRecordModel> data) {
         this.mInflater = LayoutInflater.from(context);
         mContext=context;
